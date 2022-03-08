@@ -1,0 +1,216 @@
+/*
+Theme Name: berkeley_brand
+Description: Child theme for the Alien Ship theme
+Version: 1.0
+Author: UC Berkeley Public Affairs
+Author URI: http://www.berkeley.edu/
+Template: alienship
+*/
+
+/*
+This is a starter style.css file for your Alien Ship child theme. Place it in your
+child theme's directory and activate it in the WordPress admin panel. For more
+information about creating your own child theme, visit the following web page:
+http://codex.wordpress.org/Child_Themes
+*/
+
+/*
+---------------------------------------------------------------------
+Uncomment the following line to import Alien Ship's style.css file.
+---------------------------------------------------------------------
+*/
+/* @import url("../alienship/style.css"); */
+
+
+@import url('./css/nav.css');
+@import url('./css/layout.css');
+@import url('./css/typography.css');
+@import url('./css/components.css');
+@import url('./css/utils.css');
+@import url('./css/entypo.css');
+/* from branded template */
+@import url('./css/site.css');
+/* custom css */
+@import url('./css/custom.css');
+
+.site-description {
+	color:#C4820E;
+	float:left;
+	font-family:"Open Sans",Arial,Helvetica,sans-serif;
+	font-size:24px;
+	font-weight:400;
+	line-height:1.2em;
+	margin:0;
+	margin:5px 0 0;
+	width:200px;
+	display: none;
+}
+
+body {
+	font-family:"Open Sans",Arial,Helvetica,sans-serif;
+	font-size:13px;
+	line-height:19px;
+}
+
+#page{
+		max-width: none;
+}
+#mega-menu-wrap-main #mega-menu-main img{
+	width: 255px;		
+	max-width: 100%;
+}
+#mega-menu-wrap-main #mega-menu-main a{
+	max-width: 100%;
+}
+.home.blog .entry-content img{
+		width: auto;
+} 
+img.fullpic{
+		margin-bottom: 20px;
+}
+.rsswidget img{
+		width: auto;
+}
+
+/* Widgets
+----------------------------------------------- */
+h3.widget-title {
+	font-size:20px;
+}
+
+#hero-widgets-container {
+	margin: 0 -15px;
+}
+.home #hero-widgets-container {
+    margin: 0px -15px 0 -15px;
+}
+#sidebar {
+	background-color: #fff;
+	padding: 0em;
+}
+.widget {
+	margin: 0;
+	word-wrap: break-word;
+}
+#hero-widgets-container .widget {
+	margin: 1.5em 0 0;
+	word-wrap: break-word;
+}
+.widget ul {
+	padding: 0 0 0 0;
+	list-style-type: none;
+	margin-bottom: 20px;
+}
+.widget li {
+	margin-bottom: 5px;
+	list-style: inside none none;
+}
+
+#content aside.widget_top-posts, #content aside.widget_recent_entries, #content aside.widget_nav_menu, #content aside.widget_archive, #content aside.widget_listcategorypostswidget {
+	margin: 0 0 1.5em 0;
+	border-style:solid;
+	border-width:1px;
+	border-color:#eee;
+	padding:0px;
+}
+#content .widget_top-posts, #content .widget_recent_entries, #content .widget_nav_menu, #content .widget_archive, #content .widget_listcategorypostswidget {
+	padding:0px;
+}
+#content .widget_top-posts h3, #content .widget_recent_entries h3, #content .widget_nav_menu h3, #content .widget_archive h3, #content .widget_listcategorypostswidget h3 {
+	margin: 10px;
+}
+#content .widget_top-posts ul, #content .widget_recent_entries ul, #content .widget_nav_menu ul, #content .widget_archive ul, #content .widget_listcategorypostswidget ul {
+	background-color:#eee;
+	padding:10px;
+	margin:0;
+}
+#content .widget_top-posts ul li, #content .widget_recent_entries ul li, #content .widget_nav_menu ul li, #content .widget_archive ul li, #content .widget_listcategorypostswidget ul li {
+	list-style:none;
+	margin-bottom:10px
+}
+#content .widget_top-posts li a:hover, #content .widget_recent_entries li a:hover, #content .widget_nav_menu li a:hover, #content .widget_archive li a:hover, #content .widget_listcategorypostswidget li a:hover {
+	text-decoration: underline;
+}
+
+.widget .nav-stacked {
+	padding: 0;
+}
+.widget .nav-stacked li {
+	margin-bottom: 0;
+}
+.widget a:hover {
+	background-color: #EEEEEE;
+	text-decoration: none;
+}
+#herowidgets-sidebar-1.col-sm-12, #herowidgets-sidebar-2.col-sm-12, #herowidgets-sidebar-3.col-sm-12 {
+	margin: 0px -15px 10px;
+    padding: 0;
+}
+@media (min-width:768px) {
+	.navbar-default.navbar {
+		background-color:rgba(0,0,0,0);
+		border:0 none;
+	}
+	.navbar.navbar-default.main-navigation {
+		clear:both;
+	}
+	#sidebar{
+			margin-top: 30px;
+	}
+}   
+@media (max-width:767px) {	
+	.site-title a{
+			width: 200px;
+			height: 40px;
+			margin: 10px;
+	}
+	.site-title, .site-description{
+			float: left;
+	}
+	.block.logo img{
+			max-width: 200px;
+	}
+}
+article {margin-bottom: 0px;}
+/* Adjustsment for accordion spacing */
+#accordion article {
+	margin: 0px;
+}
+#accordion .entry-content {
+	padding: 5px 0;
+}
+/* Footer */
+footer .widget ul li a.genericon {
+    color: #ffffff;
+} 
+widget_wpcom_social_media_icons_widget li {
+	border: 0 none;
+    display: inline;
+    margin-right: 0.5em;
+}
+/* Post/page and comment content */
+.entry-content {
+	padding: 15px 0 0 0;
+}
+/* widget width in 4 col mega menu */
+#mega-menu-wrap-main #mega-menu-main li .mega-menu-item.mega-menu-item-type-widget.mega-menu-columns-2-of-8 {
+	width: 25%;
+}
+/* widget width in 3 col mega menu */
+#mega-menu-wrap-main #mega-menu-main li .mega-menu-item.mega-menu-item-type-widget.mega-menu-columns-2-of-6 {
+	width: 33%;
+}
+/* widget width in 2 col mega menu */
+#mega-menu-wrap-main #mega-menu-main li .mega-menu-item.mega-menu-item-type-widget.mega-menu-columns-2-of-4 {
+	width: 50%;
+}
+/* to print toggles */
+@media print {
+	.collapse {
+		display: block !important;
+		height: auto !important;
+		visibility: visible;
+	}
+}
+
+#comments img, #comments iframe { display: none; }

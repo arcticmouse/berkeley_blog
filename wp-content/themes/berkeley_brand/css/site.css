@@ -1,0 +1,205 @@
+header#site-header .home-link {
+  position: absolute;
+  top: -42px;
+  display: block;
+  font-size: 16px;
+  color: #FFF;
+  padding: 12px 12px 12px 0;
+  font-weight: 600;
+  z-index: 999; } 
+/* Make widget row visible */  
+.footer-sidebar-row {
+		padding-right: 2em;
+		padding-left: 2em;
+}
+.footer-sidebar-row .sidebar {
+	margin-top: 20px;		
+}
+#dept-footer {
+	background: #063F75;
+	padding: 30px 0 20px;
+}
+#dept-footer .footer-sidebar-row h3 {
+	color: rgba(255,255,255,.7);
+	font-family:"Open Sans", sans-serif;
+	font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+#dept-footer .list-group-item {
+padding: 0 0 10px;
+}
+#dept-footer .footer-sidebar-row p, #dept-footer .footer-sidebar-row ul.menu li a {
+	color: #eee;
+	font-size: 15px;
+	line-height: 22px;
+}
+#dept-footer .footer-sidebar-row .widget a:hover {color: #829db5; background-color: transparent; }
+
+@media screen and (max-width: 767px) {
+  header#site-header {
+    border-top-width: 42px; } 
+}
+
+.two-line-logo a, .one-line a, .one-line-without-wordmark a {
+	text-decoration:none;
+}
+
+header#site-header/*.subbrand*/ .b-wordmark,
+header#site-header/*.subbrand*/ .dept-title {
+  display: inline-block;
+  font-size: 50px;
+  line-height: 50px; }
+  
+header#site-header/*.subbrand*/ .two-line-logo .dept-title {
+  font-size: 24px;
+  line-height: 24px; 
+  width: 250px;  /* added for WordPress template*/
+  margin: 15px 0px 0px 0px; }
+ 
+header#site-header/*.subbrand*/ .one-line-without-wordmark .one {
+  display: none; }
+header#site-header/*.subbrand*/ .one-line-without-wordmark .b-wordmark  {
+  display: none; }
+  
+@media screen and (max-width: 767px) {
+	header#site-header/*.subbrand*/ .one-line-without-wordmark .b-wordmark {
+      display: none; }
+	header#site-header/*.subbrand*/ .one-line-without-wordmark .dept-title {
+	  	width: 250px;  /* added for WordPress template*/ } }
+@media screen and (max-width: 767px) {
+  header#site-header/*.subbrand*/ .two-line-logo .dept-title, 
+  header#site-header/*.subbrand*/ .one-line-without-wordmark .dept-title {
+    font-size: 28px;
+    line-height: 30px;
+    margin: 10px 45px 15px 15px; } }
+
+header#site-header/*.subbrand*/ .one-line .two {
+  display: none; }
+		
+header#site-header/*.subbrand*/ .one-line .dept-title {
+  font-size: 50px;
+  line-height: 50px; }
+  
+  @media screen and (max-width: 767px) {
+    header#site-header/*.subbrand*/ .one-line .dept-title {
+      margin: 10px 45px 10px 15px;
+      font-size: 28px;
+      line-height: normal; } }
+	  
+	  @media screen and (max-width: 767px) { 
+header#site-header /*.subbrand*/ .dept-title.two-line-logo {
+color: #c4820e;
+font-family: "freight-sans-pro","Open Sans",sans-serif;
+vertical-align: top;
+margin-top: 12px; } }
+
+header#site-header/*.subbrand*/ .one-line h1, 
+header#site-header/*.subbrand*/ .two-line-logo h1, 
+header#site-header/*.subbrand*/ .one-line-without-wordmark h1  { 
+		margin-top: 0px;
+		margin-bottom: 0px;
+		font-size: 28px;
+}	
+header#site-header/*.subbrand*/ .one-line h1 .b-wordmark {
+width: 175px;
+height: 70px;
+margin: 10px 8px 0px -5px;
+background-image: url("cssimg/berkeley_wordmark_blue_363x112.png");
+background-image: url("cssimg/berkeley_wordmark_blue_175x70.svg"), none;
+/* multi-image technique */
+background-repeat: no-repeat;
+background-position: left center; 
+}  	  
+header#site-header/*.subbrand*/ .one-line .b-wordmark {
+  width: 175px;
+  height: 70px;
+  margin: 10px 8px 0px -5px;
+  background-image: url("cssimg/berkeley_wordmark_blue_363x112.png");
+  background-image: url("cssimg/berkeley_wordmark_blue_175x70.svg"), none;
+  /* multi-image technique */
+  background-repeat: no-repeat;
+  background-position: left center; }
+  
+  header#site-header/*.subbrand*/ .two-line-logo .b-wordmark { 
+  width: 185px;
+  height: 70px;
+  margin: 10px 0px 0px -5px;
+  background-image: url("cssimg/berkeley_wordmark_blue_363x112.png");
+  background-image: url("cssimg/berkeley_wordmark_blue_175x70.svg"), none;
+  /* multi-image technique */
+  background-repeat: no-repeat;
+  background-position: left center; 
+  padding-right: 10px;}
+  
+  header#site-header/*.subbrand*/ .two-line-logo h1 .b-wordmark { 
+	width: 185px;
+	height: 70px;
+	margin: 10px 0px 0px -5px; 
+	background-image: url("cssimg/berkeley_wordmark_blue_363x112.png");
+	background-image: url("cssimg/berkeley_wordmark_blue_175x70.svg"), none;
+	/* multi-image technique */
+	background-repeat: no-repeat;
+	background-position: left center; 
+	padding-right: 10px;
+	}
+  
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    header#site-header/*.subbrand*/ .one-line .b-wordmark {
+      background-image: url("cssimg/berkeley_wordmark_blue_175x70.svg"); } }
+  @media screen and (max-width: 767px) {
+    header#site-header/*.subbrand*/ .one-line .b-wordmark {
+      display: none; }
+	  header#site-header/*.subbrand*/ .two-line-logo .b-wordmark {
+      display: none; } }
+
+header#site-header/*.subbrand*/ .dept-title.two-line-logo {
+  font-family: 'freight-sans-pro', 'Open Sans', sans-serif;
+  color: #c4820e;
+  vertical-align: top;
+}
+
+header#site-header/*.subbrand*/ .dept-title.one-line-without-wordmark {
+  font-family: 'freight-sans-pro', 'Open Sans', sans-serif;
+  color: #c4820e;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+@media screen and (min-width: 768px) { 
+header#site-header .dept-title.one-line-without-wordmark  {
+	margin-top: 15px;
+} }
+
+header#site-header/*.subbrand*/ .dept-title {
+  font-family: 'freight-sans-pro', 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #c4820e;
+  vertical-align: top;
+  margin-top: 15px; }
+  
+  header#site-header/*.subbrand*/ .dept-title .italic {
+  font-family: 'Freight Sans Pro', 'Open Sans', sans-serif;
+  font-weight: 400; }
+
+@media screen and (max-width: 767px) {
+header#site-header /*.subbrand*/ .navbar-toggle {
+    position: absolute;
+    right: 0px;
+	top: -52px; } 
+header#site-header .navbar-toggle .icon-bar {
+		background: none repeat scroll 0 0 #fff;
+	}
+}
+#content {
+  padding-bottom: 20px; }
+
+body.search .gsc-selected-option-container {
+  width: 100% !important; }
+
+footer .copyright {
+  font-size: 13px; }
+  
+  

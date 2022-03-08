@@ -1,0 +1,142 @@
+<?php
+/*
+Plugin Name: Berkeley Blog Author Admin
+Plugin URI: 
+Description: Once authors are logged in, gives them a dropdown menu from the top toolbar & in front end footer order to manage posts
+Version: 1
+Author: leta
+Author URI: 
+*/
+
+/***********************************
+add menu to top toolbar
+**********************************
+function toolbar_links_for_authors( $wp_admin_bar ) {
+	$args = array(
+		'id'    => 'my_page',
+		'title' => 'My Page',
+		'href'  => 'http://mysite.com/my-page/',
+		'meta'  => array( 'class' => 'my-toolbar-page' )
+	);
+	$wp_admin_bar->add_node( $args );
+}//end function toolbar_links_for_authors
+
+add_action( 'admin_bar_menu', 'toolbar_links_for_authors', 999 );
+
+function your_function() {
+    echo '<p>This is inserted at the bottom</p>';
+}
+
+
+
+/***********************************
+if user is logged in and an author, editor, or administrator then add menu to footer and toolbar
+**********************************
+function author_admin_menu_additions() {
+    if ( is_user_logged_in() && ( current_user_can('author') || current_user_can('editor') || current_user_can('administrator') )) {
+        $current_user = wp_get_current_user();
+        echo 'Personal Message For ' . $current_user->user_login . '!';
+		echo 'SUCCESSSSSSSS';
+		add_action( 'wp_footer', 'your_function', 100 );
+    } //end if logged in and certain role
+}//end function author_admin_menu_additions
+
+add_action( 'loop_start', 'author_admin_menu_additions' );
+*/
+
+
+/**
+ * Adds Author_Admin_Menu_Widget widget.
+ */
+class Author_Admin_Menu_Widget extends WP_Widget {
+
+	/**
+	 * Register widget with WordPress.
+	 */
+	function __construct() {
+		parent::__construct(
+			'author_admin_menu_widget', // Base ID
+			__( 'Author Admin Menu', 'text_domain' ), // Name
+			array( 'description' => __( 'Adds administration menu to manage posts for logged in Authors, Editors, and Administrators', 'text_domain' ), ) // Args
+		);
+	}
+
+	/**
+	 * Front-end display of widget.
+	 *
+	 * @see WP_Widget::widget()
+	 *
+	 * @param array $args     Widget arguments.
+	 * @param array $instance Saved values from database.
+	 */
+	public function widget( $args, $instance ) {
+		echo $args['before_widget'];
+		
+		?><h3 class="widget-title">Admin</h3><?php
+		if ( is_user_logged_in() && ( current_user_can('author') || current_user_can('editor') || current_user_can('administrator') )) {
+			//add logged in menu
+			?>
+            <ul class="menu">
+                <li><a href="<?php echo wp_logout_url(); ?>">Logout</a></li>
+                <li><a href="/wp-admin/post-new.php">Write A Post</a></li>
+                <li><a href="/wp-admin/edit.php">Edit Posts</a></li>
+                <li><a href="/wp-admin/profile.php">Edit Profile</a></li>
+                <li><a href="/how">Help</a></li>
+            </ul>
+            <?php
+		} else {
+			?>
+            <ul class="menu">
+            	<li><a href="/wp-login.php" />Log In</a></li>
+			</ul>
+			<?php
+		}//end if logged in and certain role
+		
+		echo $args['after_widget'];
+	}
+
+} // class Author_Admin_Menu_Widget
+
+
+
+/***********************************
+// register Author_Admin_Menu_Widget widget
+***********************************/
+function register_author_admin_menu_widget() {
+    register_widget( 'Author_Admin_Menu_Widget' );
+}
+add_action( 'widgets_init', 'register_author_admin_menu_widget' );
+
+
+
+
+
+/***********************************
+// remove jetpack dashboard link for authors
+***********************************/
+function remove_admin_links_for_authors(){
+	if ( current_user_can('author') || current_user_can('editor') ) {
+		remove_menu_page( 'jetpack' );
+	}
+}
+add_action('admin_init', 'remove_admin_links_for_authors');
+
+
+
+
+
+/***********************************
+// set up meta boxes in edit for authors
+***********************************/
+function change_meta_boxes_for_authors(){
+	//if ( current_user_can('author') || current_user_can('editor') ) {
+		//remove
+		remove_meta_box('formatdiv', 'post', 'normal');
+		remove_meta_box('theme-layouts-post-meta-box', 'post', 'normal');		
+		remove_meta_box('postimagediv', 'post', 'advanced');	
+		//add
+		add_meta_box('categorydiv', 'post', 'side');
+	//}	
+}
+//add_action('admin_menu', 'change_meta_boxes_for_authors', 99);
+?>

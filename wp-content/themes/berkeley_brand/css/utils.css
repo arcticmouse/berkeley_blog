@@ -1,0 +1,69 @@
+.greybox {
+	width: 100%;
+	min-height: 40px;
+	background: #eee;
+	display: table;
+	margin-bottom: 15px;
+	color: #333;
+}
+.greybox .inner {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.greybox .caption {
+	padding: 20px;
+}
+.greybox .caption h3 {
+	margin-top: 0;
+}
+.greybox.video {
+	display: table;
+	position: relative;
+}
+.greybox.video .play-btn {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 60px;
+	color: #666;
+}
+.greybox.video .play-btn:hover {
+	opacity: .7;
+}
+a.greybox:hover,
+a.greybox:focus,
+a.greybox:active {
+	text-decoration: none;
+	background: #ddd;
+}
+.template-info-btn {
+	position: fixed;
+	top: 50%;
+	display: none;
+}
+.template-info-btn a.btn {
+	border-radius: 0 4px 4px 0;
+	padding: 2px 6px;
+	z-index: 9999;
+}
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.greybox {
+		margin-bottom: 5px;
+	}
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	
+}

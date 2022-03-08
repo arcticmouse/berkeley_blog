@@ -1,0 +1,24 @@
+/*
+Theme Name: Atahualpa
+Theme URI: http://wordpress.bytesforall.com/
+Description: Version 3.4.1 - Atahualpa is a WordPress/PHP/CSS Framework that lets you build your own unique, professional and browser-safe WordPress theme: 1-5 columns, fluid or fixed width, rotating header images and over 200 theme options. Tutorials, downloads and support at the <a href="http://forum.bytesforall.com/">BFA WP Forum</a>
+Version: 3.4.1
+Author: BytesForAll
+Author URI: http://forum.bytesforall.com/
+Tags: white, one-column, two-columns, three-columns, four-columns, fixed-width, flexible-width,  custom-colors, custom-header, theme-options, left-sidebar, right-sidebar, threaded-comments, sticky-post, translation-ready
+*/
+ 
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.alignleft {
+	float: left;
+	}
+
+.alignright {
+	float: right;
+	}
+	
